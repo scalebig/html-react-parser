@@ -2,7 +2,7 @@ var domToReact = require('./lib/dom-to-react');
 var htmlToDOM = require('html-dom-parser');
 
 // decode HTML entities by default for `htmlparser2`
-var domParserOptions = { decodeEntities: true, lowerCaseAttributeNames: false };
+var domParserOptionsDefault = { decodeEntities: true, lowerCaseAttributeNames: false };
 
 /**
  * Convert HTML string to React elements.
@@ -12,11 +12,11 @@ var domParserOptions = { decodeEntities: true, lowerCaseAttributeNames: false };
  * @param  {Function} [options.replace] - The replace method.
  * @return {ReactElement|Array}
  */
-function HTMLReactParser(html, options) {
+function HTMLReactParser(html, options, domParserOptions = {}) {
   if (typeof html !== 'string') {
     throw new TypeError('First argument must be a string');
   }
-  return domToReact(htmlToDOM(html, domParserOptions), options);
+  return domToReact(htmlToDOM(html, { ...domParserOptionsDefault, domParserOptions }), options);
 }
 
 /**
