@@ -38,8 +38,11 @@
     "style-to-object": "0.2.1"
   },
   "devDependencies": {
+    "@babel/core": "7.0.0-beta.55",
+    "@babel/preset-env": "7.0.0-beta.55",
     "@commitlint/cli": "^6.1.0",
     "@commitlint/config-conventional": "^6.1.0",
+    "babel-loader": "8.0.0-beta.4",
     "coveralls": "^3.0.0",
     "eslint": "^4.18.0",
     "eslint-plugin-prettier": "^2.6.0",
