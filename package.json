@@ -3,7 +3,7 @@
   "version": "0.4.9",
   "description": "An HTML to React parser.",
   "author": "Mark <mark@remarkablemark.org>",
-  "main": "index.js",
+  "main": "dist/html-react-parser.js",
   "scripts": {
     "build:unmin": "NODE_ENV=development webpack index.js dist/html-react-parser.js",
     "build:min": "NODE_ENV=production webpack -p index.js dist/html-react-parser.min.js",
