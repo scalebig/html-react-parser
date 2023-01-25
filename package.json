@@ -1,6 +1,6 @@
 {
   "name": "html-react-parser",
-  "version": "0.4.9",
+  "version": "0.4.10",
   "description": "An HTML to React parser.",
   "author": "Mark <mark@remarkablemark.org>",
   "main": "dist/html-react-parser.js",
@@ -51,13 +51,13 @@
     "lint-staged": "^7.1.1",
     "mocha": "5.2.0",
     "prettier": "^1.12.1",
-    "react": "^16",
-    "react-dom": "^16",
+    "react": "^17",
+    "react-dom": "^17",
     "standard-version": "^4.3.0",
     "webpack": "^3.11.0"
   },
   "peerDependencies": {
-    "react": "^0.14 || ^15 || ^16"
+    "react": "^0.14 || ^15 || ^16 || ^17 || ^18"
   },
   "files": [
     "dist",
