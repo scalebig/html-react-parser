@@ -1003,6 +1003,13 @@
           // lowercase to make matching property names easier
           config.html[propertyName.toLowerCase()] = propertyName;
         }
+
+        // React 15's property table predates these image attributes; without them
+        // `attributesToProps` silently drops the attribute before React ever sees it.
+        // Kept lowercase so React does not warn about unrecognized camelCase props.
+        config.html.loading = 'loading';
+        config.html.decoding = 'decoding';
+        config.html.fetchpriority = 'fetchpriority';
         /**
          * SVG DOM property config.
          *
